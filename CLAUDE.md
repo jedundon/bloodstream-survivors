@@ -49,3 +49,50 @@ This is a Phaser 3 TypeScript game using Vite for bundling, targeting GitHub Pag
 - Build artifacts go to `dist/`
 - Deployed to GitHub Pages with relative asset paths
 - Assets must be optimized for web delivery
+
+## Documentation and Task Management
+
+When working on this project, Claude should actively reference these key documents:
+
+### Primary References (Always Check First)
+- **`docs/bloodstream_survivors_prd.md`**: Complete product requirements and specifications
+  - Use for exact feature requirements, stats, and mechanics
+  - Reference specific sections/line numbers when implementing features
+  - All numerical values (damage, HP, timers) must match PRD exactly
+
+### Architecture and Implementation Guides
+- **`docs/ARCHITECTURE.md`**: System design patterns and code organization
+- **`docs/PHASER_PATTERNS.md`**: Framework-specific best practices
+- **`docs/GAME_SYSTEMS.md`**: Detailed implementation guidance for core systems
+- **`docs/DATA_SCHEMAS.md`**: JSON structure requirements for game data
+- **`docs/TESTING_GUIDE.md`**: Testing approach and examples
+
+### Task Management and Development Process
+- **`.github/development-workflow.md`**: Development workflow for incremental builds
+- **`.github/milestones.md`**: Alpha build scope and validation criteria
+- **`.github/alpha-1-issues.md`**: Detailed Alpha 1 task breakdown
+- **`.github/alpha-2-5-issues.md`**: Advanced feature task breakdown
+
+### Implementation Guidelines
+1. **Always check PRD first** for exact specifications before implementing any feature
+2. **Reference architecture docs** to understand system integration patterns
+3. **Follow alpha milestone scope** - only implement features assigned to current alpha
+4. **Use exact numerical values** from PRD (no guessing or approximation)
+5. **Check existing issues** in `.github/` files to understand task breakdown and dependencies
+6. **Validate against acceptance criteria** defined in issue templates
+
+### When Adding New Features
+1. Check if feature exists in PRD specifications
+2. Review relevant architecture documentation
+3. Check if GitHub issue exists for this feature
+4. Follow component patterns established in existing code
+5. Implement exact requirements, no scope creep
+6. Test against acceptance criteria from issue templates
+
+### Data-Driven Development
+All game configuration should be loaded from JSON files in `assets/data/`:
+- Weapon stats and upgrade paths
+- Enemy specifications and behaviors  
+- Level progression and XP thresholds
+- Power-up effects and durations
+- Never hardcode values that exist in PRD
