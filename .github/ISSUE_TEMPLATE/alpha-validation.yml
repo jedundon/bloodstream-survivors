@@ -1,0 +1,74 @@
+name: Alpha Build Validation
+description: Template for validating and testing alpha builds
+title: "[Alpha] Validation - "
+labels: ["alpha-build", "testing"]
+body:
+  - type: dropdown
+    id: alpha-build
+    attributes:
+      label: Alpha Build
+      description: Which alpha build is being validated?
+      options:
+        - Alpha 1 - Core Mechanics
+        - Alpha 2 - Progression System
+        - Alpha 3 - Full Weapon Set + UI
+        - Alpha 4 - Enemy Variety + Bosses
+        - Alpha 5 - Polish + Meta-progression
+    validations:
+      required: true
+
+  - type: textarea
+    id: features-included
+    attributes:
+      label: Features Included
+      description: List all features that should be present in this alpha
+      placeholder: |
+        - [ ] Player movement (8-directional WASD)
+        - [ ] Basic virus enemy spawning
+        - [ ] Phagocytosis Burst weapon
+        - [ ] Basic collision detection
+        - [ ] Health system
+    validations:
+      required: true
+
+  - type: textarea
+    id: testing-checklist
+    attributes:
+      label: Testing Checklist
+      description: Specific tests to perform for validation
+      placeholder: |
+        - [ ] Player can move smoothly in all 8 directions
+        - [ ] Enemies spawn at screen edges and move toward player
+        - [ ] Weapon fires on cooldown and damages enemies
+        - [ ] Player takes damage from enemy contact
+        - [ ] Game ends when player health reaches 0
+        - [ ] No console errors during 5-minute play session
+    validations:
+      required: true
+
+  - type: textarea
+    id: performance-targets
+    attributes:
+      label: Performance Targets
+      description: Performance requirements that must be met
+      placeholder: |
+        - [ ] Maintains 60 FPS during normal gameplay
+        - [ ] No memory leaks during extended play
+        - [ ] Smooth gameplay with 20+ enemies on screen
+
+  - type: textarea
+    id: known-limitations
+    attributes:
+      label: Known Limitations
+      description: Features intentionally not included in this alpha
+      placeholder: "XP system, weapon upgrades, and additional weapons will be added in Alpha 2"
+
+  - type: textarea
+    id: feedback-areas
+    attributes:
+      label: Key Feedback Areas
+      description: Specific areas where product validation is needed
+      placeholder: |
+        - Does the movement feel responsive?
+        - Is the weapon satisfying to use?
+        - Is the difficulty curve appropriate for early game?

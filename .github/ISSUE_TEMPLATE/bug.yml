@@ -1,0 +1,73 @@
+name: Bug Report
+description: Report a bug or issue with the game
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Severity
+      description: How severe is this bug?
+      options:
+        - Critical (Game breaking/crashes)
+        - High (Major feature broken)
+        - Medium (Minor feature issue)
+        - Low (Cosmetic/polish)
+    validations:
+      required: true
+
+  - type: dropdown
+    id: alpha-build
+    attributes:
+      label: Alpha Build
+      description: Which alpha build was this found in?
+      options:
+        - Alpha 1 - Core Mechanics
+        - Alpha 2 - Progression System
+        - Alpha 3 - Full Weapon Set + UI
+        - Alpha 4 - Enemy Variety + Bosses
+        - Alpha 5 - Polish + Meta-progression
+        - Development/Local
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: Clear description of the bug
+      placeholder: "Player can move through enemies when using Micro-Teleport skill..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to Reproduce
+      description: Detailed steps to reproduce this bug
+      placeholder: |
+        1. Start new game
+        2. Select Micro-Teleport as special skill
+        3. Activate skill near an enemy
+        4. Observe player phases through enemy
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: What should happen instead?
+      placeholder: "Player should pass through enemies without taking damage but maintain collision after teleport"
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: What actually happens?
+      placeholder: "Player remains non-solid indefinitely"
+
+  - type: input
+    id: environment
+    attributes:
+      label: Environment
+      description: Browser, OS, and any relevant system info
+      placeholder: "Chrome 120, Windows 11, 1920x1080"

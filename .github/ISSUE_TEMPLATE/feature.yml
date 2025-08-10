@@ -1,0 +1,91 @@
+name: Feature Implementation
+description: Template for implementing new game features
+title: "[Feature] "
+labels: ["enhancement", "feature"]
+body:
+  - type: dropdown
+    id: alpha-build
+    attributes:
+      label: Alpha Build Target
+      description: Which alpha build should this feature be included in?
+      options:
+        - Alpha 1 - Core Mechanics
+        - Alpha 2 - Progression System
+        - Alpha 3 - Full Weapon Set + UI
+        - Alpha 4 - Enemy Variety + Bosses
+        - Alpha 5 - Polish + Meta-progression
+    validations:
+      required: true
+  
+  - type: dropdown
+    id: component
+    attributes:
+      label: Component Area
+      description: Which game system does this feature primarily affect?
+      options:
+        - Player/Movement
+        - Weapons/Combat
+        - Enemies/AI
+        - UI/HUD
+        - Audio/Visual
+        - Systems/Core
+        - Data/Config
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Feature Description
+      description: Detailed description of the feature to implement
+      placeholder: "Implement the Phagocytosis Burst weapon with radial damage in 100px radius..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance-criteria
+    attributes:
+      label: Acceptance Criteria
+      description: Specific, testable requirements for this feature
+      placeholder: |
+        - [ ] Weapon deals 10 base damage in 100px radius
+        - [ ] 1.5s cooldown implemented correctly
+        - [ ] Weapon upgrades increase radius by 20px per level
+        - [ ] Visual effects show burst animation
+        - [ ] Audio plays on weapon activation
+    validations:
+      required: true
+
+  - type: textarea
+    id: prd-reference
+    attributes:
+      label: PRD Reference
+      description: Link to relevant sections in the PRD or documentation
+      placeholder: "See PRD section 3.3 Weapons Table, line 68"
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Development priority for this feature
+      options:
+        - Critical (Blocking alpha)
+        - High (Core feature)
+        - Medium (Enhancement)
+        - Low (Nice to have)
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: Check any systems this feature depends on
+      options:
+        - label: Player movement system
+        - label: Weapon system framework
+        - label: Enemy spawning system
+        - label: UI/HUD system
+        - label: Audio system
+        - label: Particle system
+        - label: Data loading system
