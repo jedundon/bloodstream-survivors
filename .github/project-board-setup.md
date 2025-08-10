@@ -39,10 +39,31 @@ Create these labels in Issues → Labels:
 - `alpha-1` through `alpha-5` (different colors)
 - `alpha-ready` (green) - Ready for alpha testing
 
-### 4. Set Up Automation Rules
+### 4. Set Up Automation Rules ⚠️ (Manual Setup Required)
+Once you create the Project board, configure these automation rules in Project Settings:
 - Auto-move to "In Progress" when issue assigned
 - Auto-move to "Done" when issue closed
 - Auto-add alpha label based on milestone
 
-### 5. Create Milestones
-Use the milestone definitions that will be generated in the next step.
+*Note: These automation rules cannot be configured via CLI and require manual setup in the GitHub web interface.*
+
+### 5. Create Milestones ✅ (Completed)
+All milestones have been created:
+- [Alpha 1 - Core Mechanics](https://github.com/jedundon/bloodstream-survivors/milestone/1) (due Aug 31)
+- [Alpha 2 - Progression System](https://github.com/jedundon/bloodstream-survivors/milestone/2) (due Sep 21)
+- [Alpha 3 - Full Weapon Set + UI](https://github.com/jedundon/bloodstream-survivors/milestone/3) (due Oct 19)
+- [Alpha 4 - Enemy Variety + Bosses](https://github.com/jedundon/bloodstream-survivors/milestone/4) (due Nov 16)
+- [Alpha 5 - Polish + Meta-progression](https://github.com/jedundon/bloodstream-survivors/milestone/5) (due Dec 21)
+
+## Setup Status Summary
+
+✅ **Completed via CLI:**
+- All 5 milestones with descriptions and due dates
+- All priority, component, and alpha labels
+- 19 initial GitHub issues across all alphas
+- Issue templates for consistent formatting
+
+⚠️ **Requires Manual Setup:**
+- GitHub Project board creation (web UI only)
+- Project board automation rules
+- Linking issues to project board columns
